@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link
+        href="https://fonts.googleapis.com/css?family=Gelasio|Libre+Baskerville|Noto+Serif|Source+Serif+Pro&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <nav>
+        <div class="container-nav">
+            <h1 class="logo">Calculator</h1>
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+                <select name="chose an option" class="select-value" onchange="location = this.value;">
+                    <option value="index.html">$</option>
+                    <option value="euro.html">€</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container-calculator">
+        <div class="calculator">
+            <div class="titlu-calculator">
+                <h2>TIP CALCULATOR</h2>
+            </div>
+            <div class="form-container">
+                <form action="" class="form">
+                    <div class="primul-form">
+                        <p class="prima">How much is your bill?</p>
+                        <div class="inp">
+                            $
+                            <input type="text" placeholder="Bill Amount" class="input-text" id="in" />
+                        </div>
+                    </div>
+                    <div class="option-container-parent">
+                        <div class="option-container">
+                            <p>How was your service?</p>
+                            <p>
+                                <select name="chose an option" class="select-option" id="option">
+                                    <option disabled selected value="0">-- Choose an Option --</option>
+                                    <option value="0.3">30&#37; &#45; Outstanding</option>
+                                    <option value="0.2">20&#37; &#45; Good</option>
+                                    <option value="0.15">15&#37; &#45; It was OK</option>
+                                    <option value="0.1">10&#37; &#45; Bad</option>
+                                    <option value="0.05">5&#37; &#45; Terrible</option>
+                                </select>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="doi-form">
+                    <p>How many people are sharing the bill?</p>
+                    <div class="input-2-container">
+                        <input type="text" class="input-2-text" placeholder="Number of People" id="people" />people
+                    </div>
+                </div>
+
+                <button type="submit" id="calculate">Calculate!</button>
+
+                <div class="result" id="resultat">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-footer">
+        <footer>&copy; Copyright 2019 Asu Software</footer>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
