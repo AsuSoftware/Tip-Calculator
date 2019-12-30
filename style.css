@@ -240,6 +240,15 @@ span {
   font-size: 20px;
 }
 
+.result {
+  display: flex;
+  flex-direction: column;
+}
+
+.total-tip {
+  margin-top: 26px;
+}
+
 .container-footer {
   display: flex;
   justify-content: center;
