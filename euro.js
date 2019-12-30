@@ -35,10 +35,18 @@ class Calculate {
             this.resultContainer.innerHTML = ""; //Rimuovi il contenuto di div
             this.total = (this.input.value * this.option.value) / this.person.value;
             this.total = this.total.toFixed(2);
+            this.impreuna = this.total * this.person.value;
+            this.impreuna = this.impreuna.toFixed(2);
             console.log(this.total);
+            console.log(this.person.value);
+            console.log(this.impreuna);
             this.resul = document.createElement('span');
-            this.resul.innerText = `Result : \n ${this.total} € \n For Each`;
+            this.resImpreuna = document.createElement('span');
+            this.resImpreuna.className = 'total-tip';
+            this.resul.innerText = `Result : \n ${this.total} € For Each`;
+            this.resImpreuna.innerText = `Total Tip : \n ${this.impreuna} €`;
             this.resultContainer.appendChild(this.resul);
+            this.resultContainer.appendChild(this.resImpreuna);
 
         } else {
             alert("Please enter a valid number");
